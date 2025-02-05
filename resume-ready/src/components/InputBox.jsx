@@ -15,6 +15,7 @@ const InputBox = ({
         type={IPtype}
         placeholder={IPplaceholder}
         className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+        required
       />
     </div>
   );
