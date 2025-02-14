@@ -33,6 +33,77 @@ const MainForm = () => {
   const [startDateVal_3, setGraduation_3] = useState("");
   const [endDateVal_3, setEndDate_3] = useState("");
 
+  // for skills info
+  const [label_1, setLabel_1] = useState("");
+  const [skillList_1, setSkillList_1] = useState("");
+  const [label_2, setLabel_2] = useState("");
+  const [skillList_2, setSkillList_2] = useState("");
+  const [label_3, setLabel_3] = useState("");
+  const [skillList_4, setSkillList_4] = useState("");
+
+  // for experience
+  const [positionVal_1, setPosition_1] = useState("");
+  const [companyNameVal_1, setCompanyName_1] = useState("");
+  const [companyCityVal_1, setCompanyCity_1] = useState("");
+  const [companyCountryVal_1, setCompanyCountry_1] = useState("");
+  const [companyStartDateVal_1, setCompanyStartDateVal_1] = useState("");
+  const [companyEndDateVal_1, setCompanyEndDateVal_1] = useState("");
+  const [companyDescriptionVal_1, setCompanyDescriptionVal_1] = useState("");
+
+  const [positionVal_2, setPosition_2] = useState("");
+  const [companyNameVal_2, setCompanyName_2] = useState("");
+  const [companyCityVal_2, setCompanyCity_2] = useState("");
+  const [companyCountryVal_2, setCompanyCountry_2] = useState("");
+  const [companyStartDateVal_2, setCompanyStartDateVal_2] = useState("");
+  const [companyEndDateVal_2, setCompanyEndDateVal_2] = useState("");
+  const [companyDescriptionVal_2, setCompanyDescriptionVal_2] = useState("");
+
+  const [positionVal_3, setPosition_3] = useState("");
+  const [companyNameVal_3, setCompanyName_3] = useState("");
+  const [companyCityVal_3, setCompanyCity_3] = useState("");
+  const [companyCountryVal_3, setCompanyCountry_3] = useState("");
+  const [companyStartDateVal_3, setCompanyStartDateVal_3] = useState("");
+  const [companyEndDateVal_3, setCompanyEndDateVal_3] = useState("");
+  const [companyDescriptionVal_3, setCompanyDescriptionVal_3] = useState("");
+
+  // for projects
+  const [projectName_1, setProjectName_1] = useState("");
+  const [projectDescription_1, setProjectDescription_1] = useState("");
+  const [projectGithubLink_1, setProjectGithubLink_1] = useState("");
+  const [projectLiveLink_1, setProjectLiveLink_1] = useState("");
+  const [projectStack_1, setProjectStack_1] = useState("");
+
+  const [projectName_2, setProjectName_2] = useState("");
+  const [projectDescription_2, setProjectDescription_2] = useState("");
+  const [projectGithubLink_2, setProjectGithubLink_2] = useState("");
+  const [projectLiveLink_2, setProjectLiveLink_2] = useState("");
+  const [projectStack_2, setProjectStack_2] = useState("");
+
+  const [projectName_3, setProjectName_3] = useState("");
+  const [projectDescription_3, setProjectDescription_3] = useState("");
+  const [projectGithubLink_3, setProjectGithubLink_3] = useState("");
+  const [projectLiveLink_3, setProjectLiveLink_3] = useState("");
+  const [projectStack_3, setProjectStack_3] = useState("");
+
+  const [projectName_4, setProjectName_4] = useState("");
+  const [projectDescription_4, setProjectDescription_4] = useState("");
+  const [projectGithubLink_4, setProjectGithubLink_4] = useState("");
+  const [projectLiveLink_4, setProjectLiveLink_4] = useState("");
+  const [projectStack_4, setProjectStack_4] = useState("");
+
+  // for achievements
+  const [achievementTitle_1, setAchievementTitle_1] = useState(""); // achievement
+  const [achievementDescription_1, setAchievementDescription_1] = useState("");
+
+  const [achievementTitle_2, setAchievementTitle_2] = useState(""); // achievement
+  const [achievementDescription_2, setAchievementDescription_2] = useState("");
+
+  const [achievementTitle_3, setAchievementTitle_3] = useState(""); // achievement
+  const [achievementDescription_3, setAchievementDescription_3] = useState("");
+
+  const [achievementTitle_4, setAchievementTitle_4] = useState(""); // achievement
+  const [achievementDescription_4, setAchievementDescription_4] = useState("");
+
   return (
     <div className="p-4 flex flex-col">
       <h3 className="text-2xl font-normal text-center p-3">
@@ -463,9 +534,33 @@ const MainForm = () => {
 
           {/* education number 1*/}
           <div className="flex flex-col justify-start  mt-4">
-            <h2 className="text-xl py-1 ">Education</h2>
-            <hr />
-            <div className="flex flex-col px-3 py-0.5">
+            <div>
+              {schoolVal_1 !== "" ||
+              cityVal_1 !== "" ||
+              countryVal_1 !== "" ||
+              degreeVal_1 !== "" ||
+              startDateVal_1 !== "" ||
+              endDateVal_1 !== "" ||
+              schoolVal_2 !== "" ||
+              cityVal_2 !== "" ||
+              countryVal_2 !== "" ||
+              degreeVal_2 !== "" ||
+              startDateVal_2 !== "" ||
+              endDateVal_2 !== "" ||
+              schoolVal_3 !== "" ||
+              cityVal_3 !== "" ||
+              countryVal_3 !== "" ||
+              degreeVal_3 !== "" ||
+              startDateVal_3 !== "" ||
+              endDateVal_3 !== "" ? (
+                <>
+                  <h2 className="text-xl py-1">Education</h2>
+                  <hr />
+                </>
+              ) : null}
+            </div>
+
+            <div className="flex flex-col px-3 py-0.5a">
               <div className="flex flex-row justify-between p-0 ">
                 <span className="font-bold text-lg">
                   {schoolVal_1 === "" ? "" : schoolVal_1}
