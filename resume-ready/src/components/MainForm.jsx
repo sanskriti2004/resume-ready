@@ -39,6 +39,8 @@ const MainForm = () => {
   const [label_2, setLabel_2] = useState("");
   const [skillList_2, setSkillList_2] = useState("");
   const [label_3, setLabel_3] = useState("");
+  const [skillList_3, setSkillList_3] = useState("");
+  const [label_4, setLabel_4] = useState("");
   const [skillList_4, setSkillList_4] = useState("");
 
   // for experience
@@ -490,6 +492,146 @@ const MainForm = () => {
         </div>
       </div>
 
+      {/* technical skills */}
+      <div className="flex flex-col mb-3">
+        <h2 className="text-xl font-bold p-2">Technical Skills</h2>
+        {/* Input boxes */}
+        <div className="flex flex-row flex-wrap m-3">
+          {/* label input box */}
+          <div className="flex flex-col m-1 mr-2">
+            <label
+              htmlFor="skillsLabel_1"
+              className="text-sm text-gray-400 p-1"
+            >
+              Label
+            </label>
+            <input
+              id="skillsLabel_1"
+              type="text"
+              placeholder="Enter label of skill"
+              className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+              required
+              value={label_1}
+              onChange={(e) => setLabel_1(e.target.value)}
+            />
+          </div>
+          {/* skills input box */}
+          <div className="flex flex-col m-1 mr-2">
+            <label htmlFor="skillList_1" className="text-sm text-gray-400 p-1">
+              Skills
+            </label>
+            <input
+              id="skillList_1"
+              type="text"
+              placeholder="Enter skills"
+              className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+              required
+              value={skillList_1}
+              onChange={(e) => setSkillList_1(e.target.value)}
+            />
+          </div>
+
+          <div className="flex flex-col m-1 mr-2">
+            <label
+              htmlFor="skillsLabel_2"
+              className="text-sm text-gray-400 p-1"
+            >
+              Label
+            </label>
+            <input
+              id="skillsLabel_2"
+              type="text"
+              placeholder="Enter label of skill"
+              className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+              required
+              value={label_2}
+              onChange={(e) => setLabel_2(e.target.value)}
+            />
+          </div>
+          {/* skills input box */}
+          <div className="flex flex-col m-1 mr-2">
+            <label htmlFor="skillList_2" className="text-sm text-gray-400 p-1">
+              Skills
+            </label>
+            <input
+              id="skillList_2"
+              type="text"
+              placeholder="Enter skills"
+              className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+              required
+              value={skillList_2}
+              onChange={(e) => setSkillList_2(e.target.value)}
+            />
+          </div>
+
+          <div className="flex flex-col m-1 mr-2">
+            <label
+              htmlFor="skillsLabel_3"
+              className="text-sm text-gray-400 p-1"
+            >
+              Label
+            </label>
+            <input
+              id="skillsLabel_3"
+              type="text"
+              placeholder="Enter label of skill"
+              className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+              required
+              value={label_3}
+              onChange={(e) => setLabel_3(e.target.value)}
+            />
+          </div>
+          {/* skills input box */}
+          <div className="flex flex-col m-1 mr-2">
+            <label htmlFor="skillList_3" className="text-sm text-gray-400 p-1">
+              Skills
+            </label>
+            <input
+              id="skillList_3"
+              type="text"
+              placeholder="Enter skills"
+              className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+              required
+              value={skillList_3}
+              onChange={(e) => setSkillList_3(e.target.value)}
+            />
+          </div>
+
+          <div className="flex flex-col m-1 mr-2">
+            <label
+              htmlFor="skillsLabel_4"
+              className="text-sm text-gray-400 p-1"
+            >
+              Label
+            </label>
+            <input
+              id="skillsLabel_4"
+              type="text"
+              placeholder="Enter label of skill"
+              className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+              required
+              value={label_4}
+              onChange={(e) => setLabel_4(e.target.value)}
+            />
+          </div>
+          {/* skills input box */}
+          <div className="flex flex-col m-1 mr-2">
+            <label htmlFor="skillList_4" className="text-sm text-gray-400 p-1">
+              Skills
+            </label>
+            <input
+              id="skillList_4"
+              type="text"
+              placeholder="Enter skills"
+              className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+              required
+              value={skillList_4}
+              onChange={(e) => setSkillList_4(e.target.value)}
+            />
+          </div>
+        </div>
+      </div>
+
       {/* resume sheet */}
       <div className="flex justify-center flex-col items-center p-10 font-['Times_New_Roman'] bg-blue-100">
         <div className="w-[210mm] h-[297mm] bg-white shadow-2xl p-7">
@@ -570,7 +712,7 @@ const MainForm = () => {
                   <span>{countryVal_1 === "" ? "" : ", " + countryVal_1}</span>
                 </div>
               </div>
-              <div className="flex flex-row justify-between mt-[-5px]">
+              <div className="flex flex-row justify-between italic mt-[-5px]">
                 <span>{degreeVal_1 === "" ? "" : degreeVal_1}</span>
                 <div>
                   <span>
@@ -591,7 +733,7 @@ const MainForm = () => {
                   <span>{countryVal_2 === "" ? "" : ", " + countryVal_2}</span>
                 </div>
               </div>
-              <div className="flex flex-row justify-between mt-[-5px]">
+              <div className="flex flex-row justify-between italic mt-[-5px]">
                 <span>{degreeVal_2 === "" ? "" : degreeVal_2}</span>
                 <div>
                   <span>
@@ -612,7 +754,7 @@ const MainForm = () => {
                   <span>{countryVal_3 === "" ? "" : ", " + countryVal_3}</span>
                 </div>
               </div>
-              <div className="flex flex-row justify-between mt-[-5px]">
+              <div className="flex flex-row justify-between italic mt-[-5px]">
                 <span>{degreeVal_3 === "" ? "" : degreeVal_3}</span>
                 <div>
                   <span>
@@ -620,6 +762,61 @@ const MainForm = () => {
                   </span>
                   <span>{endDateVal_3 === "" ? "" : endDateVal_3}</span>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* skills section */}
+          {/* education number 1*/}
+          <div className="flex flex-col justify-start  mt-2">
+            <div>
+              {label_1 !== "" ||
+              skillList_1 !== "" ||
+              label_2 !== "" ||
+              skillList_2 !== "" ||
+              label_3 !== "" ||
+              skillList_3 !== "" ||
+              label_4 !== "" ||
+              skillList_4 !== "" ? (
+                <>
+                  <h2 className="text-xl py-1">Technical Skills</h2>
+                  <hr />
+                </>
+              ) : null}
+            </div>
+
+            <div className="flex flex-col px-3  mt-1  py-0.5">
+              <div className="flex flex-row items-center gap-1 my-[-2px] p-0 ">
+                <span className="font-bold text-m mr-1">
+                  {label_1 === "" ? "" : label_1 + ":" + " "}
+                </span>
+                <span className="text-m italic">
+                  {skillList_1 === "" ? "" : skillList_1}
+                </span>
+              </div>
+              <div className="flex flex-row items-center gap-1 my-[-2px] p-0 ">
+                <span className="font-bold text-m mr-1">
+                  {label_2 === "" ? "" : label_2 + ":" + " "}
+                </span>
+                <span className="text-m italic">
+                  {skillList_2 === "" ? "" : skillList_2}
+                </span>
+              </div>
+              <div className="flex flex-row items-center gap-1 my-[-2px]  p-0">
+                <span className="font-bold text-m mr-1">
+                  {label_3 === "" ? "" : label_3 + ":" + " "}
+                </span>
+                <span className="text-m italic">
+                  {skillList_3 === "" ? "" : skillList_3}
+                </span>
+              </div>
+              <div className="flex flex-row items-center gap-1 my-[-2px] p-0 ">
+                <span className="font-bold text-m mr-1">
+                  {label_4 === "" ? "" : label_4 + ":" + " "}
+                </span>
+                <span className="text-m italic">
+                  {skillList_4 === "" ? "" : skillList_4}
+                </span>
               </div>
             </div>
           </div>
