@@ -630,6 +630,137 @@ const MainForm = () => {
             />
           </div>
         </div>
+
+        {/* achievements inputs */}
+        <div className="flex flex-col mb-3">
+          <h2 className="text-xl font-bold p-2">Honors and Rewards</h2>
+          {/* Input boxes */}
+          <div className="flex flex-row flex-wrap m-3">
+            {/* label input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label htmlFor="achLabel_1" className="text-sm text-gray-400 p-1">
+                Title
+              </label>
+              <input
+                id="achLabel_1"
+                type="text"
+                placeholder="Enter title"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={achievementTitle_1}
+                onChange={(e) => setAchievementTitle_1(e.target.value)}
+              />
+            </div>
+            {/* skills input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label htmlFor="ach_desc_1" className="text-sm text-gray-400 p-1">
+                Description
+              </label>
+              <input
+                id="ach_desc_1"
+                type="text"
+                placeholder="Enter description"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={achievementDescription_1}
+                onChange={(e) => setAchievementDescription_1(e.target.value)}
+              />
+            </div>
+
+            {/* label input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label htmlFor="achLabel_2" className="text-sm text-gray-400 p-1">
+                Title
+              </label>
+              <input
+                id="achLabel_2"
+                type="text"
+                placeholder="Enter title"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={achievementTitle_2}
+                onChange={(e) => setAchievementTitle_2(e.target.value)}
+              />
+            </div>
+            {/* skills input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label htmlFor="ach_desc_2" className="text-sm text-gray-400 p-1">
+                Description
+              </label>
+              <input
+                id="ach_desc_2"
+                type="text"
+                placeholder="Enter description"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={achievementDescription_2}
+                onChange={(e) => setAchievementDescription_2(e.target.value)}
+              />
+            </div>
+
+            {/* label input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label htmlFor="achLabel_3" className="text-sm text-gray-400 p-1">
+                Title
+              </label>
+              <input
+                id="achLabel_3"
+                type="text"
+                placeholder="Enter title"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={achievementTitle_3}
+                onChange={(e) => setAchievementTitle_3(e.target.value)}
+              />
+            </div>
+            {/* skills input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label htmlFor="ach_desc_3" className="text-sm text-gray-400 p-1">
+                Description
+              </label>
+              <input
+                id="ach_desc_3"
+                type="text"
+                placeholder="Enter description"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={achievementDescription_3}
+                onChange={(e) => setAchievementDescription_3(e.target.value)}
+              />
+            </div>
+
+            {/* label input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label htmlFor="achLabel_4" className="text-sm text-gray-400 p-1">
+                Title
+              </label>
+              <input
+                id="achLabel_4"
+                type="text"
+                placeholder="Enter title"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={achievementTitle_4}
+                onChange={(e) => setAchievementTitle_4(e.target.value)}
+              />
+            </div>
+            {/* skills input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label htmlFor="ach_desc_4" className="text-sm text-gray-400 p-1">
+                Description
+              </label>
+              <input
+                id="ach_desc_4"
+                type="text"
+                placeholder="Enter description"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={achievementDescription_4}
+                onChange={(e) => setAchievementDescription_4(e.target.value)}
+              />
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* resume sheet */}
@@ -696,78 +827,99 @@ const MainForm = () => {
               startDateVal_3 !== "" ||
               endDateVal_3 !== "" ? (
                 <>
-                  <h2 className="text-xl py-1">Education</h2>
+                  <h2 className="text-l py-1">EDUCATION</h2>
                   <hr />
                 </>
               ) : null}
             </div>
+            <ul className="list-disc pl-3.5">
+              {schoolVal_1 ||
+              cityVal_1 ||
+              countryVal_1 ||
+              degreeVal_1 ||
+              startDateVal_1 ||
+              endDateVal_1 ? (
+                <li>
+                  <div className="flex flex-col">
+                    <div className="flex flex-row justify-between p-0 mt-1">
+                      <span className="font-bold text-m">
+                        {schoolVal_1 && schoolVal_1}
+                      </span>
+                      <div>
+                        <span>{cityVal_1 && cityVal_1}</span>
+                        <span>{countryVal_1 && `, ${countryVal_1}`}</span>
+                      </div>
+                    </div>
+                    <div className="flex flex-row justify-between italic mt-[-5px]">
+                      <span>{degreeVal_1 && degreeVal_1}</span>
+                      <div>
+                        <span>{startDateVal_1 && `${startDateVal_1}-`}</span>
+                        <span>{endDateVal_1 && endDateVal_1}</span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              ) : null}
 
-            <div className="flex flex-col px-3 py-0.5a">
-              <div className="flex flex-row justify-between p-0 ">
-                <span className="font-bold text-lg">
-                  {schoolVal_1 === "" ? "" : schoolVal_1}
-                </span>
-                <div>
-                  <span>{cityVal_1 === "" ? "" : cityVal_1}</span>
-                  <span>{countryVal_1 === "" ? "" : ", " + countryVal_1}</span>
-                </div>
-              </div>
-              <div className="flex flex-row justify-between italic mt-[-5px]">
-                <span>{degreeVal_1 === "" ? "" : degreeVal_1}</span>
-                <div>
-                  <span>
-                    {startDateVal_1 === "" ? "" : startDateVal_1 + "-"}
-                  </span>
-                  <span>{endDateVal_1 === "" ? "" : endDateVal_1}</span>
-                </div>
-              </div>
-            </div>
+              {schoolVal_2 ||
+              cityVal_2 ||
+              countryVal_2 ||
+              degreeVal_2 ||
+              startDateVal_2 ||
+              endDateVal_2 ? (
+                <li>
+                  <div className="flex flex-col">
+                    <div className="flex flex-row justify-between p-0">
+                      <span className="font-bold text-m">
+                        {schoolVal_2 && schoolVal_2}
+                      </span>
+                      <div>
+                        <span>{cityVal_2 && cityVal_2}</span>
+                        <span>{countryVal_2 && `, ${countryVal_2}`}</span>
+                      </div>
+                    </div>
+                    <div className="flex flex-row justify-between italic mt-[-5px]">
+                      <span>{degreeVal_2 && degreeVal_2}</span>
+                      <div>
+                        <span>{startDateVal_2 && `${startDateVal_2}-`}</span>
+                        <span>{endDateVal_2 && endDateVal_2}</span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              ) : null}
 
-            <div className="flex flex-col px-3 py-0.5">
-              <div className="flex flex-row justify-between p-0 ">
-                <span className="font-bold text-lg">
-                  {schoolVal_2 === "" ? "" : schoolVal_2}
-                </span>
-                <div>
-                  <span>{cityVal_2 === "" ? "" : cityVal_2}</span>
-                  <span>{countryVal_2 === "" ? "" : ", " + countryVal_2}</span>
-                </div>
-              </div>
-              <div className="flex flex-row justify-between italic mt-[-5px]">
-                <span>{degreeVal_2 === "" ? "" : degreeVal_2}</span>
-                <div>
-                  <span>
-                    {startDateVal_2 === "" ? "" : startDateVal_2 + "-"}
-                  </span>
-                  <span>{endDateVal_2 === "" ? "" : endDateVal_2}</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-col px-3 py-0.5 ">
-              <div className="flex flex-row justify-between p-0 ">
-                <span className="font-bold text-lg">
-                  {schoolVal_3 === "" ? "" : schoolVal_3}
-                </span>
-                <div>
-                  <span>{cityVal_3 === "" ? "" : cityVal_3}</span>
-                  <span>{countryVal_3 === "" ? "" : ", " + countryVal_3}</span>
-                </div>
-              </div>
-              <div className="flex flex-row justify-between italic mt-[-5px]">
-                <span>{degreeVal_3 === "" ? "" : degreeVal_3}</span>
-                <div>
-                  <span>
-                    {startDateVal_3 === "" ? "" : startDateVal_3 + "-"}
-                  </span>
-                  <span>{endDateVal_3 === "" ? "" : endDateVal_3}</span>
-                </div>
-              </div>
-            </div>
+              {schoolVal_3 ||
+              cityVal_3 ||
+              countryVal_3 ||
+              degreeVal_3 ||
+              startDateVal_3 ||
+              endDateVal_3 ? (
+                <li>
+                  <div className="flex flex-col">
+                    <div className="flex flex-row justify-between p-0">
+                      <span className="font-bold text-m">
+                        {schoolVal_3 && schoolVal_3}
+                      </span>
+                      <div>
+                        <span>{cityVal_3 && cityVal_3}</span>
+                        <span>{countryVal_3 && `, ${countryVal_3}`}</span>
+                      </div>
+                    </div>
+                    <div className="flex flex-row justify-between italic mt-[-5px]">
+                      <span>{degreeVal_3 && degreeVal_3}</span>
+                      <div>
+                        <span>{startDateVal_3 && `${startDateVal_3}-`}</span>
+                        <span>{endDateVal_3 && endDateVal_3}</span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              ) : null}
+            </ul>
           </div>
 
           {/* skills section */}
-          {/* education number 1*/}
           <div className="flex flex-col justify-start  mt-2">
             <div>
               {label_1 !== "" ||
@@ -779,46 +931,146 @@ const MainForm = () => {
               label_4 !== "" ||
               skillList_4 !== "" ? (
                 <>
-                  <h2 className="text-xl py-1">Technical Skills</h2>
+                  <h2 className="text-l py-1">TECHNICAL SKILLS</h2>
                   <hr />
                 </>
               ) : null}
             </div>
+            <ul className="list-disc pl-3.5">
+              <div className="flex flex-col mt-1 py-0.5">
+                {label_1 || skillList_1 ? (
+                  <li>
+                    <div className="flex flex-row items-center gap-1 my-[-2px] p-0">
+                      <span className="font-bold text-m mr-1">
+                        {label_1 && `${label_1}: `}
+                      </span>
+                      <span className="text-m italic">{skillList_1}</span>
+                    </div>
+                  </li>
+                ) : null}
 
-            <div className="flex flex-col px-3  mt-1  py-0.5">
-              <div className="flex flex-row items-center gap-1 my-[-2px] p-0 ">
-                <span className="font-bold text-m mr-1">
-                  {label_1 === "" ? "" : label_1 + ":" + " "}
-                </span>
-                <span className="text-m italic">
-                  {skillList_1 === "" ? "" : skillList_1}
-                </span>
+                {label_2 || skillList_2 ? (
+                  <li>
+                    <div className="flex flex-row items-center gap-1 my-[-2px] p-0">
+                      <span className="font-bold text-m mr-1">
+                        {label_2 && `${label_2}: `}
+                      </span>
+                      <span className="text-m italic">{skillList_2}</span>
+                    </div>
+                  </li>
+                ) : null}
+
+                {label_3 || skillList_3 ? (
+                  <li>
+                    <div className="flex flex-row items-center gap-1 my-[-2px] p-0">
+                      <span className="font-bold text-m mr-1">
+                        {label_3 && `${label_3}: `}
+                      </span>
+                      <span className="text-m italic">{skillList_3}</span>
+                    </div>
+                  </li>
+                ) : null}
+
+                {label_4 || skillList_4 ? (
+                  <li>
+                    <div className="flex flex-row items-center gap-1 my-[-2px] p-0">
+                      <span className="font-bold text-m mr-1">
+                        {label_4 && `${label_4}: `}
+                      </span>
+                      <span className="text-m italic">{skillList_4}</span>
+                    </div>
+                  </li>
+                ) : null}
               </div>
-              <div className="flex flex-row items-center gap-1 my-[-2px] p-0 ">
-                <span className="font-bold text-m mr-1">
-                  {label_2 === "" ? "" : label_2 + ":" + " "}
-                </span>
-                <span className="text-m italic">
-                  {skillList_2 === "" ? "" : skillList_2}
-                </span>
-              </div>
-              <div className="flex flex-row items-center gap-1 my-[-2px]  p-0">
-                <span className="font-bold text-m mr-1">
-                  {label_3 === "" ? "" : label_3 + ":" + " "}
-                </span>
-                <span className="text-m italic">
-                  {skillList_3 === "" ? "" : skillList_3}
-                </span>
-              </div>
-              <div className="flex flex-row items-center gap-1 my-[-2px] p-0 ">
-                <span className="font-bold text-m mr-1">
-                  {label_4 === "" ? "" : label_4 + ":" + " "}
-                </span>
-                <span className="text-m italic">
-                  {skillList_4 === "" ? "" : skillList_4}
-                </span>
-              </div>
+            </ul>
+          </div>
+
+          {/* ACHIEVEMENTS SECTION */}
+          <div className="flex flex-col justify-start  mt-2">
+            <div>
+              {achievementTitle_1 !== "" ||
+              achievementDescription_1 !== "" ||
+              achievementTitle_2 !== "" ||
+              achievementDescription_2 !== "" ||
+              achievementTitle_3 !== "" ||
+              achievementDescription_3 !== "" ||
+              achievementTitle_4 !== "" ||
+              achievementDescription_4 !== "" ? (
+                <>
+                  <h2 className="text-L  py-1">HONOURS AND REWARDS</h2>
+                  <hr />
+                </>
+              ) : null}
             </div>
+            <ul className="list-disc pl-3.5">
+              {achievementTitle_1 || achievementDescription_1 ? (
+                <li>
+                  <div className="flex flex-col leading-[19px] mt-1 py-0.5">
+                    <div className="flex flex-row items-center gap-1 my-[-2px] p-0">
+                      <span className="text-m mr-1">
+                        <span className="font-bold">
+                          {achievementTitle_1 && `${achievementTitle_1}: `}
+                        </span>
+                        <span className="text-m">
+                          {achievementDescription_1}
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+              ) : null}
+
+              {achievementTitle_2 || achievementDescription_2 ? (
+                <li>
+                  <div className="flex flex-col leading-[19px] py-0.5">
+                    <div className="flex flex-row items-center gap-1 my-[-2px] p-0">
+                      <span className="text-m mr-1">
+                        <span className="font-bold">
+                          {achievementTitle_2 && `${achievementTitle_2}: `}
+                        </span>
+                        <span className="text-m">
+                          {achievementDescription_2}
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+              ) : null}
+
+              {achievementTitle_3 || achievementDescription_3 ? (
+                <li>
+                  <div className="flex flex-col leading-[19px] py-0.5">
+                    <div className="flex flex-row items-center gap-1 my-[-2px] p-0">
+                      <span className="text-m mr-1">
+                        <span className="font-bold">
+                          {achievementTitle_3 && `${achievementTitle_3}: `}
+                        </span>
+                        <span className="text-m">
+                          {achievementDescription_3}
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+              ) : null}
+
+              {achievementTitle_4 || achievementDescription_4 ? (
+                <li>
+                  <div className="flex flex-col leading-[19px] py-0.5">
+                    <div className="flex flex-row items-center gap-1 my-[-2px] p-0">
+                      <span className="text-m mr-1">
+                        <span className="font-bold">
+                          {achievementTitle_4 && `${achievementTitle_4}: `}
+                        </span>
+                        <span className="text-m">
+                          {achievementDescription_4}
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+              ) : null}
+            </ul>
           </div>
         </div>
       </div>
