@@ -106,6 +106,14 @@ const MainForm = () => {
   const [achievementTitle_4, setAchievementTitle_4] = useState(""); // achievement
   const [achievementDescription_4, setAchievementDescription_4] = useState("");
 
+  const createListItems = (text) => {
+    return text
+      .split(".")
+      .map((sentence) => sentence.trim())
+      .filter((sentence) => sentence)
+      .map((sentence, index) => <li key={index}>{sentence}.</li>);
+  };
+
   return (
     <div className="p-4 flex flex-col">
       <h3 className="text-2xl font-normal text-center p-3">
@@ -631,6 +639,366 @@ const MainForm = () => {
           </div>
         </div>
 
+        {/* EXPERIENCE SECTION INPUTS  */}
+
+        <div className="flex flex-col mb-3">
+          <h2 className="text-xl font-bold p-2">Experience</h2>
+          {/* Input boxes */}
+          <div className="flex flex-row flex-wrap m-3">
+            {/* Name input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="positionName_1"
+                className="text-sm text-gray-400 p-1"
+              >
+                Role
+              </label>
+              <input
+                id="positionName_1"
+                type="text"
+                placeholder="Enter your role"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={positionVal_1}
+                onChange={(e) => setPosition_1(e.target.value)}
+              />
+            </div>
+            {/* Email input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="companyName_1"
+                className="text-sm text-gray-400 p-1"
+              >
+                Company
+              </label>
+              <input
+                id="companyName_1"
+                type="text"
+                placeholder="Enter company name"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={companyNameVal_1}
+                onChange={(e) => setCompanyName_1(e.target.value)}
+              />
+            </div>
+            {/* phone no input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="compCityName_1"
+                className="text-sm text-gray-400 p-1"
+              >
+                City
+              </label>
+              <input
+                id="compCityName_1"
+                type="text"
+                placeholder="Enter city"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={companyCityVal_1}
+                onChange={(e) => setCompanyCity_1(e.target.value)}
+              />
+            </div>
+            {/* linkedin input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="compCountryName_1"
+                className="text-sm text-gray-400 p-1"
+              >
+                Country
+              </label>
+              <input
+                id="compCountryName_1"
+                type="text"
+                placeholder="Enter country"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                value={companyCountryVal_1}
+                onChange={(e) => setCompanyCountry_1(e.target.value)}
+              />
+            </div>
+            {/* github input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="compStartYear_1"
+                className="text-sm text-gray-400 p-1"
+              >
+                Start Year
+              </label>
+              <input
+                id="compStartYear_1"
+                type="number"
+                placeholder="Enter start year"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                value={companyStartDateVal_1}
+                onChange={(e) => setCompanyStartDateVal_1(e.target.value)}
+              />
+            </div>
+            {/* portfolio input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="compEndYear_1"
+                className="text-sm text-gray-400 p-1"
+              >
+                End Year
+              </label>
+              <input
+                id="compEndYear_1"
+                type="number"
+                placeholder="Enter end year"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                value={companyEndDateVal_1}
+                onChange={(e) => setCompanyEndDateVal_1(e.target.value)}
+              />
+            </div>
+            <div className="flex flex-col m-1 mr-2">
+              <label htmlFor="compDesc_1" className="text-sm text-gray-400 p-1">
+                Description
+              </label>
+              <input
+                id="compDesc_1"
+                type="text"
+                placeholder="Enter role description"
+                className="bg-gray-100 w-263   p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                value={companyDescriptionVal_1}
+                onChange={(e) => setCompanyDescriptionVal_1(e.target.value)}
+              />
+            </div>
+            {/* Email input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="positionName_2"
+                className="text-sm text-gray-400 p-1"
+              >
+                Role
+              </label>
+              <input
+                id="positionName_2"
+                type="text"
+                placeholder="Enter your role"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={positionVal_2}
+                onChange={(e) => setPosition_2(e.target.value)}
+              />
+            </div>
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="companyName_2"
+                className="text-sm text-gray-400 p-1"
+              >
+                Company
+              </label>
+              <input
+                id="companyName_2"
+                type="text"
+                placeholder="Enter company name"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={companyNameVal_2}
+                onChange={(e) => setCompanyName_2(e.target.value)}
+              />
+            </div>
+            {/* phone no input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="compCityName_2"
+                className="text-sm text-gray-400 p-1"
+              >
+                City
+              </label>
+              <input
+                id="compCityName_2"
+                type="text"
+                placeholder="Enter city"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={companyCityVal_2}
+                onChange={(e) => setCompanyCity_2(e.target.value)}
+              />
+            </div>
+            {/* linkedin input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="compCountryName_2"
+                className="text-sm text-gray-400 p-1"
+              >
+                Country
+              </label>
+              <input
+                id="compCountryName_2"
+                type="text"
+                placeholder="Enter country"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                value={companyCountryVal_2}
+                onChange={(e) => setCompanyCountry_2(e.target.value)}
+              />
+            </div>
+            {/* github input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="compStartYear_2"
+                className="text-sm text-gray-400 p-1"
+              >
+                Start Year
+              </label>
+              <input
+                id="compStartYear_2"
+                type="number"
+                placeholder="Enter start year"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                value={companyStartDateVal_2}
+                onChange={(e) => setCompanyStartDateVal_2(e.target.value)}
+              />
+            </div>
+            {/* portfolio input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="compEndYear_2"
+                className="text-sm text-gray-400 p-1"
+              >
+                End Year
+              </label>
+              <input
+                id="compEndYear_2"
+                type="number"
+                placeholder="Enter end year"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                value={companyEndDateVal_2}
+                onChange={(e) => setCompanyEndDateVal_2(e.target.value)}
+              />
+            </div>
+            <div className="flex flex-col m-1 mr-2">
+              <label htmlFor="compDesc_2" className="text-sm text-gray-400 p-1">
+                Description
+              </label>
+              <input
+                id="compDesc_2"
+                type="text"
+                placeholder="Enter role description"
+                className="bg-gray-100 w-263   p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                value={companyDescriptionVal_2}
+                onChange={(e) => setCompanyDescriptionVal_2(e.target.value)}
+              />
+            </div>
+            {/* Email input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="positionName_3"
+                className="text-sm text-gray-400 p-1"
+              >
+                Role
+              </label>
+              <input
+                id="positionName_3"
+                type="text"
+                placeholder="Enter your role"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={positionVal_3}
+                onChange={(e) => setPosition_3(e.target.value)}
+              />
+            </div>
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="companyName_3"
+                className="text-sm text-gray-400 p-1"
+              >
+                Company
+              </label>
+              <input
+                id="companyName_3"
+                type="text"
+                placeholder="Enter company name"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={companyNameVal_3}
+                onChange={(e) => setCompanyName_3(e.target.value)}
+              />
+            </div>
+            {/* phone no input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="compCityName_3"
+                className="text-sm text-gray-400 p-1"
+              >
+                City
+              </label>
+              <input
+                id="compCityName_3"
+                type="text"
+                placeholder="Enter city"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={companyCityVal_3}
+                onChange={(e) => setCompanyCity_3(e.target.value)}
+              />
+            </div>
+            {/* linkedin input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="compCountryName_3"
+                className="text-sm text-gray-400 p-1"
+              >
+                Country
+              </label>
+              <input
+                id="compCountryName_3"
+                type="text"
+                placeholder="Enter country"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                value={companyCountryVal_3}
+                onChange={(e) => setCompanyCountry_3(e.target.value)}
+              />
+            </div>
+            {/* github input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="compStartYear_3"
+                className="text-sm text-gray-400 p-1"
+              >
+                Start Year
+              </label>
+              <input
+                id="compStartYear_3"
+                type="number"
+                placeholder="Enter start year"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                value={companyStartDateVal_3}
+                onChange={(e) => setCompanyStartDateVal_3(e.target.value)}
+              />
+            </div>
+            {/* portfolio input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="compEndYear_3"
+                className="text-sm text-gray-400 p-1"
+              >
+                End Year
+              </label>
+              <input
+                id="compEndYear_3"
+                type="number"
+                placeholder="Enter end year"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                value={companyEndDateVal_3}
+                onChange={(e) => setCompanyEndDateVal_3(e.target.value)}
+              />
+            </div>
+            <div className="flex flex-col m-1 mr-2">
+              <label htmlFor="compDesc_3" className="text-sm text-gray-400 p-1">
+                Description
+              </label>
+              <input
+                id="compDesc_3"
+                type="text"
+                placeholder="Enter role description"
+                className="bg-gray-100 w-263  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                value={companyDescriptionVal_3}
+                onChange={(e) => setCompanyDescriptionVal_3(e.target.value)}
+              />
+            </div>
+          </div>
+        </div>
         {/* achievements inputs */}
         <div className="flex flex-col mb-3">
           <h2 className="text-xl font-bold p-2">Honors and Rewards</h2>
@@ -983,6 +1351,137 @@ const MainForm = () => {
                 ) : null}
               </div>
             </ul>
+          </div>
+
+          {/* EDUCATION SECTION */}
+          <div className="flex flex-col justify-start  mt-2">
+            <div>
+              {companyCityVal_1 !== "" ||
+              companyCityVal_2 !== "" ||
+              companyCityVal_3 !== "" ||
+              companyCountryVal_1 !== "" ||
+              companyCountryVal_2 !== "" ||
+              companyCountryVal_3 !== "" ||
+              companyDescriptionVal_1 !== "" ||
+              companyDescriptionVal_2 !== "" ||
+              companyDescriptionVal_3 !== "" ||
+              companyEndDateVal_1 !== "" ||
+              companyEndDateVal_2 !== "" ||
+              companyEndDateVal_3 !== "" ||
+              companyNameVal_1 !== "" ||
+              companyNameVal_2 !== "" ||
+              companyNameVal_3 !== "" ||
+              companyStartDateVal_1 !== "" ||
+              companyStartDateVal_2 !== "" ||
+              companyStartDateVal_3 !== "" ||
+              positionVal_1 !== "" ||
+              positionVal_2 !== "" ||
+              positionVal_3 !== "" ? (
+                <>
+                  <h2 className="text-l py-1">EXPERIENCE</h2>
+                  <hr />
+                </>
+              ) : null}
+            </div>
+          </div>
+          <div className="flex flex-col  ">
+            <div className="flex flex-row justify-between p-0 mt-1 ">
+              <span className="font-bold text-m">
+                {positionVal_1 === "" ? "" : positionVal_1}
+              </span>
+              <div>
+                <span>{companyCityVal_1 === "" ? "" : companyCityVal_1}</span>
+                <span>
+                  {companyCountryVal_1 === "" ? "" : ", " + companyCountryVal_1}
+                </span>
+              </div>
+            </div>
+            <div className="flex flex-row justify-between italic mt-[-5px]">
+              <span>{companyNameVal_1 === "" ? "" : companyNameVal_1}</span>
+              <div>
+                <span>
+                  {companyStartDateVal_1 === ""
+                    ? ""
+                    : companyStartDateVal_1 + "-"}
+                </span>
+                <span>
+                  {companyEndDateVal_1 === "" ? "" : companyEndDateVal_1}
+                </span>
+              </div>
+            </div>
+            <div className="flex flex-row justify-between italic mt-[-5px]">
+              <ul className="list-disc pl-7 leading-[19px]">
+                {companyDescriptionVal_1 === ""
+                  ? ""
+                  : createListItems(companyDescriptionVal_1)}
+              </ul>
+            </div>
+          </div>
+          <div className="flex flex-col  ">
+            <div className="flex flex-row justify-between p-0 mt-1 ">
+              <span className="font-bold text-m">
+                {positionVal_2 === "" ? "" : positionVal_2}
+              </span>
+              <div>
+                <span>{companyCityVal_2 === "" ? "" : companyCityVal_2}</span>
+                <span>
+                  {companyCountryVal_2 === "" ? "" : ", " + companyCountryVal_2}
+                </span>
+              </div>
+            </div>
+            <div className="flex flex-row justify-between italic mt-[-5px]">
+              <span>{companyNameVal_2 === "" ? "" : companyNameVal_2}</span>
+              <div>
+                <span>
+                  {companyStartDateVal_2 === ""
+                    ? ""
+                    : companyStartDateVal_2 + "-"}
+                </span>
+                <span>
+                  {companyEndDateVal_2 === "" ? "" : companyEndDateVal_2}
+                </span>
+              </div>
+            </div>
+            <div className="flex flex-row justify-between italic mt-[-5px]">
+              <ul className="list-disc pl-7 leading-[19px]">
+                {companyDescriptionVal_2 === ""
+                  ? ""
+                  : createListItems(companyDescriptionVal_2)}
+              </ul>
+            </div>
+          </div>
+          <div className="flex flex-col  ">
+            <div className="flex flex-row justify-between p-0 mt-1 ">
+              <span className="font-bold text-m">
+                {positionVal_3 === "" ? "" : positionVal_3}
+              </span>
+              <div>
+                <span>{companyCityVal_3 === "" ? "" : companyCityVal_3}</span>
+                <span>
+                  {companyCountryVal_3 === "" ? "" : ", " + companyCountryVal_3}
+                </span>
+              </div>
+            </div>
+            <div className="flex flex-row justify-between italic mt-[-5px]">
+              <span>{companyNameVal_3 === "" ? "" : companyNameVal_3}</span>
+              <div>
+                <span>
+                  {companyStartDateVal_3 === ""
+                    ? ""
+                    : companyStartDateVal_3 + "-"}
+                </span>
+                <span>
+                  {companyEndDateVal_3 === "" ? "" : companyEndDateVal_3}
+                </span>
+              </div>
+            </div>
+            <div className="flex flex-row justify-between italic mt-[-5px]">
+              <ul className="list-disc pl-7 leading-[19px]">
+                {companyDescriptionVal_3 === ""
+                  ? ""
+                  : createListItems(companyDescriptionVal_3)}
+              </ul>
+            </div>
           </div>
 
           {/* ACHIEVEMENTS SECTION */}
