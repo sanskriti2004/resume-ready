@@ -111,7 +111,11 @@ const MainForm = () => {
       .split(".")
       .map((sentence) => sentence.trim())
       .filter((sentence) => sentence)
-      .map((sentence, index) => <li key={index}>{sentence}.</li>);
+      .map((sentence, index) => (
+        <li className="text-[14px] leading-[17px]" key={index}>
+          {sentence}.
+        </li>
+      ));
   };
 
   return (
@@ -999,6 +1003,364 @@ const MainForm = () => {
             </div>
           </div>
         </div>
+
+        {/* PROJECTS INPUT SECTION */}
+        <div className="flex flex-col mb-3">
+          <h2 className="text-xl font-bold p-2">Projects</h2>
+          {/* Input boxes */}
+          <div className="flex flex-row flex-wrap m-3">
+            {/* Name input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="projectName_1"
+                className="text-sm text-gray-400 p-1"
+              >
+                Project Name
+              </label>
+              <input
+                id="projectName_1"
+                type="text"
+                placeholder="Enter name of the project"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={projectName_1}
+                onChange={(e) => setProjectName_1(e.target.value)}
+              />
+            </div>
+            {/* Email input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="projectStack_1"
+                className="text-sm text-gray-400 p-1"
+              >
+                Tech Stack
+              </label>
+              <input
+                id="projectStack_1"
+                type="text"
+                placeholder="Enter tech stack of the project"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={projectStack_1}
+                onChange={(e) => setProjectStack_1(e.target.value)}
+              />
+            </div>
+            {/* phone no input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="projectGithub_1"
+                className="text-sm text-gray-400 p-1"
+              >
+                GitHub link
+              </label>
+              <input
+                id="projectGithub_1"
+                type="text"
+                placeholder="Enter github link to project"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={projectGithubLink_1}
+                onChange={(e) => setProjectGithubLink_1(e.target.value)}
+              />
+            </div>
+            {/* linkedin input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="projectLiveLink_1"
+                className="text-sm text-gray-400 p-1"
+              >
+                Live link
+              </label>
+              <input
+                id="projectLiveLink_1"
+                type="text"
+                placeholder="Enter country"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                value={projectLiveLink_1}
+                onChange={(e) => setProjectLiveLink_1(e.target.value)}
+              />
+            </div>
+
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="projectDesc_1"
+                className="text-sm text-gray-400 p-1"
+              >
+                Description
+              </label>
+              <input
+                id="projectDesc_1"
+                type="text"
+                placeholder="Enter role description"
+                className="bg-gray-100 w-263   p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                value={projectDescription_1}
+                onChange={(e) => setProjectDescription_1(e.target.value)}
+              />
+            </div>
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="projectName_2"
+                className="text-sm text-gray-400 p-1"
+              >
+                Project Name
+              </label>
+              <input
+                id="projectName_2"
+                type="text"
+                placeholder="Enter name of the project"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={projectName_2}
+                onChange={(e) => setProjectName_2(e.target.value)}
+              />
+            </div>
+            {/* Email input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="projectStack_2"
+                className="text-sm text-gray-400 p-1"
+              >
+                Tech Stack
+              </label>
+              <input
+                id="projectStack_2"
+                type="text"
+                placeholder="Enter tech stack of the project"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={projectStack_2}
+                onChange={(e) => setProjectStack_2(e.target.value)}
+              />
+            </div>
+            {/* phone no input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="projectGithub_2"
+                className="text-sm text-gray-400 p-1"
+              >
+                GitHub link
+              </label>
+              <input
+                id="projectGithub_2"
+                type="text"
+                placeholder="Enter github link to project"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={projectGithubLink_2}
+                onChange={(e) => setProjectGithubLink_2(e.target.value)}
+              />
+            </div>
+            {/* linkedin input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="projectLiveLink_2"
+                className="text-sm text-gray-400 p-1"
+              >
+                Live link
+              </label>
+              <input
+                id="projectLiveLink_2"
+                type="text"
+                placeholder="Enter country"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                value={projectLiveLink_2}
+                onChange={(e) => setProjectLiveLink_2(e.target.value)}
+              />
+            </div>
+
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="projectDesc_2"
+                className="text-sm text-gray-400 p-1"
+              >
+                Description
+              </label>
+              <input
+                id="projectDesc_2"
+                type="text"
+                placeholder="Enter role description"
+                className="bg-gray-100 w-263   p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                value={projectDescription_2}
+                onChange={(e) => setProjectDescription_2(e.target.value)}
+              />
+            </div>
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="projectName_3"
+                className="text-sm text-gray-400 p-1"
+              >
+                Project Name
+              </label>
+              <input
+                id="projectName_3"
+                type="text"
+                placeholder="Enter name of the project"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={projectName_3}
+                onChange={(e) => setProjectName_3(e.target.value)}
+              />
+            </div>
+            {/* Email input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="projectStack_3"
+                className="text-sm text-gray-400 p-1"
+              >
+                Tech Stack
+              </label>
+              <input
+                id="projectStack_3"
+                type="text"
+                placeholder="Enter tech stack of the project"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={projectStack_3}
+                onChange={(e) => setProjectStack_3(e.target.value)}
+              />
+            </div>
+            {/* phone no input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="projectGithub_3"
+                className="text-sm text-gray-400 p-1"
+              >
+                GitHub link
+              </label>
+              <input
+                id="projectGithub_3"
+                type="text"
+                placeholder="Enter github link to project"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={projectGithubLink_3}
+                onChange={(e) => setProjectGithubLink_3(e.target.value)}
+              />
+            </div>
+            {/* linkedin input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="projectLiveLink_3"
+                className="text-sm text-gray-400 p-1"
+              >
+                Live link
+              </label>
+              <input
+                id="projectLiveLink_3"
+                type="text"
+                placeholder="Enter country"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                value={projectLiveLink_3}
+                onChange={(e) => setProjectLiveLink_3(e.target.value)}
+              />
+            </div>
+
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="projectDesc_3"
+                className="text-sm text-gray-400 p-1"
+              >
+                Description
+              </label>
+              <input
+                id="projectDesc_3"
+                type="text"
+                placeholder="Enter role description"
+                className="bg-gray-100 w-263   p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                value={projectDescription_3}
+                onChange={(e) => setProjectDescription_3(e.target.value)}
+              />
+            </div>
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="projectName_4"
+                className="text-sm text-gray-400 p-1"
+              >
+                Project Name
+              </label>
+              <input
+                id="projectName_4"
+                type="text"
+                placeholder="Enter name of the project"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={projectName_4}
+                onChange={(e) => setProjectName_4(e.target.value)}
+              />
+            </div>
+            {/* Email input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="projectStack_4"
+                className="text-sm text-gray-400 p-1"
+              >
+                Tech Stack
+              </label>
+              <input
+                id="projectStack_4"
+                type="text"
+                placeholder="Enter tech stack of the project"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={projectStack_4}
+                onChange={(e) => setProjectStack_4(e.target.value)}
+              />
+            </div>
+            {/* phone no input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="projectGithub_4"
+                className="text-sm text-gray-400 p-1"
+              >
+                GitHub link
+              </label>
+              <input
+                id="projectGithub_4"
+                type="text"
+                placeholder="Enter github link to project"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                required
+                value={projectGithubLink_4}
+                onChange={(e) => setProjectGithubLink_4(e.target.value)}
+              />
+            </div>
+            {/* linkedin input box */}
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="projectLiveLink_4"
+                className="text-sm text-gray-400 p-1"
+              >
+                Live link
+              </label>
+              <input
+                id="projectLiveLink_4"
+                type="text"
+                placeholder="Enter country"
+                className="bg-gray-100 w-130  p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                value={projectLiveLink_4}
+                onChange={(e) => setProjectLiveLink_4(e.target.value)}
+              />
+            </div>
+
+            <div className="flex flex-col m-1 mr-2">
+              <label
+                htmlFor="projectDesc_4"
+                className="text-sm text-gray-400 p-1"
+              >
+                Description
+              </label>
+              <input
+                id="projectDesc_4"
+                type="text"
+                placeholder="Enter role description"
+                className="bg-gray-100 w-263   p-2 rounded-xs focus:outline-none focus:shadow-md focus:border-b-cyan-600"
+                value={projectDescription_4}
+                onChange={(e) => setProjectDescription_4(e.target.value)}
+              />
+            </div>
+          </div>
+        </div>
+
         {/* achievements inputs */}
         <div className="flex flex-col mb-3">
           <h2 className="text-xl font-bold p-2">Honors and Rewards</h2>
@@ -1140,7 +1502,7 @@ const MainForm = () => {
             <div className="flex flex-row justify-center gap-2 items-center ">
               <p className="text-sm  ">{phoneVal}</p>
               <span>{emailVal === "" ? "" : "|"}</span>
-              <a href="mailto:{emailVal}" className="text-sm text-blue-700">
+              <a href="mailto:{emailVal}" className="text-sm ">
                 {emailVal}
               </a>
               <span>{linkedinVal === "" ? "" : "|"}</span>
@@ -1148,7 +1510,7 @@ const MainForm = () => {
                 href={linkedinVal}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-700"
+                className="underline underline-offset-1"
               >
                 {linkedinVal === "" ? "" : "Linkedin"}
               </a>
@@ -1157,7 +1519,7 @@ const MainForm = () => {
                 href={githubVal}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-700"
+                className="underline underline-offset-1"
               >
                 {githubVal === "" ? "" : "Github"}
               </a>
@@ -1166,7 +1528,7 @@ const MainForm = () => {
                 href={portfolioVal}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-700"
+                className="underline underline-offset-1"
               >
                 {portfolioVal === "" ? "" : "Portfolio"}
               </a>
@@ -1409,8 +1771,8 @@ const MainForm = () => {
                 </span>
               </div>
             </div>
-            <div className="flex flex-row justify-between italic mt-[-5px]">
-              <ul className="list-disc pl-7 leading-[19px]">
+            <div className="flex flex-row justify-between ">
+              <ul className="list-disc pl-7 ">
                 {companyDescriptionVal_1 === ""
                   ? ""
                   : createListItems(companyDescriptionVal_1)}
@@ -1442,8 +1804,8 @@ const MainForm = () => {
                 </span>
               </div>
             </div>
-            <div className="flex flex-row justify-between italic mt-[-5px]">
-              <ul className="list-disc pl-7 leading-[19px]">
+            <div className="flex flex-row justify-between ">
+              <ul className="list-disc pl-7 ">
                 {companyDescriptionVal_2 === ""
                   ? ""
                   : createListItems(companyDescriptionVal_2)}
@@ -1475,11 +1837,194 @@ const MainForm = () => {
                 </span>
               </div>
             </div>
-            <div className="flex flex-row justify-between italic mt-[-5px]">
-              <ul className="list-disc pl-7 leading-[19px]">
+            <div className="flex flex-row justify-between ">
+              <ul className="list-disc pl-7 ">
                 {companyDescriptionVal_3 === ""
                   ? ""
                   : createListItems(companyDescriptionVal_3)}
+              </ul>
+            </div>
+          </div>
+
+          {/* project section */}
+          {/* EDUCATION SECTION */}
+          <div className="flex flex-col justify-start  mt-2">
+            <div>
+              {projectDescription_1 !== "" ||
+              projectDescription_2 !== "" ||
+              projectDescription_3 !== "" ||
+              projectDescription_4 !== "" ||
+              projectGithubLink_1 !== "" ||
+              projectGithubLink_2 !== "" ||
+              projectGithubLink_3 !== "" ||
+              projectGithubLink_4 !== "" ||
+              projectLiveLink_1 !== "" ||
+              projectLiveLink_2 !== "" ||
+              projectLiveLink_3 !== "" ||
+              projectLiveLink_4 !== "" ||
+              projectName_1 !== "" ||
+              projectName_2 !== "" ||
+              projectName_3 !== "" ||
+              projectName_4 !== "" ||
+              projectStack_1 !== "" ||
+              projectStack_2 !== "" ||
+              projectStack_3 !== "" ||
+              projectStack_4 !== "" ? (
+                <>
+                  <h2 className="text-l py-1">PROJECTS</h2>
+                  <hr />
+                </>
+              ) : null}
+            </div>
+          </div>
+          <div className="flex flex-col ">
+            <div className="flex flex-row  p-0 mt-1 ">
+              <span className="font-bold text-m">
+                {projectName_1 === "" ? "" : projectName_1}
+              </span>
+              <span className="px-1"> {projectStack_1 === "" ? "" : "|"}</span>
+              <span className="italic">
+                {projectStack_1 === "" ? "" : projectStack_1}
+              </span>
+            </div>
+            <div className="mt-[-4px]">
+              <span>
+                <a
+                  className="underline underline-offset-1"
+                  href={projectGithubLink_1 === "" ? "" : projectGithubLink_1}
+                >
+                  {projectGithubLink_1 === "" ? "" : "GitHub"}
+                </a>
+              </span>
+              <span className="pl-1">
+                <a
+                  className="underline underline-offset-1"
+                  href={projectLiveLink_1 === "" ? "" : projectLiveLink_1}
+                >
+                  {projectLiveLink_1 === "" ? "" : "Live"}
+                </a>
+              </span>
+            </div>
+
+            <div className="flex flex-row justify-between ">
+              <ul className="list-disc pl-7 ">
+                {projectDescription_1 === ""
+                  ? ""
+                  : createListItems(projectDescription_1)}
+              </ul>
+            </div>
+          </div>
+
+          <div className="flex flex-col ">
+            <div className="flex flex-row  p-0 mt-1 ">
+              <span className="font-bold text-m">
+                {projectName_2 === "" ? "" : projectName_2}
+              </span>
+              <span className="px-1"> {projectStack_2 === "" ? "" : "|"}</span>
+              <span className="italic">
+                {projectStack_2 === "" ? "" : projectStack_2}
+              </span>
+            </div>
+            <div className="mt-[-4px]">
+              <span>
+                <a
+                  className="underline underline-offset-1"
+                  href={projectGithubLink_2 === "" ? "" : projectGithubLink_2}
+                >
+                  {projectGithubLink_2 === "" ? "" : "GitHub"}
+                </a>
+              </span>
+              <span className="pl-1">
+                <a
+                  className="underline underline-offset-1"
+                  href={projectLiveLink_2 === "" ? "" : projectLiveLink_2}
+                >
+                  {projectLiveLink_2 === "" ? "" : "Live"}
+                </a>
+              </span>
+            </div>
+
+            <div className="flex flex-row justify-between ">
+              <ul className="list-disc pl-7 ">
+                {projectDescription_2 === ""
+                  ? ""
+                  : createListItems(projectDescription_2)}
+              </ul>
+            </div>
+          </div>
+
+          <div className="flex flex-col ">
+            <div className="flex flex-row  p-0 mt-1 ">
+              <span className="font-bold text-m">
+                {projectName_3 === "" ? "" : projectName_3}
+              </span>
+              <span className="px-1"> {projectStack_3 === "" ? "" : "|"}</span>
+              <span className="italic">
+                {projectStack_3 === "" ? "" : projectStack_3}
+              </span>
+            </div>
+            <div className="mt-[-4px]">
+              <span>
+                <a
+                  className="underline underline-offset-1"
+                  href={projectGithubLink_3 === "" ? "" : projectGithubLink_3}
+                >
+                  {projectGithubLink_3 === "" ? "" : "GitHub"}
+                </a>
+              </span>
+              <span className="pl-1">
+                <a
+                  className="underline underline-offset-1"
+                  href={projectLiveLink_3 === "" ? "" : projectLiveLink_3}
+                >
+                  {projectLiveLink_3 === "" ? "" : "Live"}
+                </a>
+              </span>
+            </div>
+
+            <div className="flex flex-row justify-between ">
+              <ul className="list-disc pl-7 ">
+                {projectDescription_3 === ""
+                  ? ""
+                  : createListItems(projectDescription_3)}
+              </ul>
+            </div>
+          </div>
+
+          <div className="flex flex-col ">
+            <div className="flex flex-row  p-0 mt-1 ">
+              <span className="font-bold text-m">
+                {projectName_4 === "" ? "" : projectName_4}
+              </span>
+              <span className="px-1"> {projectStack_4 === "" ? "" : "|"}</span>
+              <span className="italic">
+                {projectStack_4 === "" ? "" : projectStack_4}
+              </span>
+            </div>
+            <div className="mt-[-4px]">
+              <span>
+                <a
+                  className="underline underline-offset-1"
+                  href={projectGithubLink_4 === "" ? "" : projectGithubLink_4}
+                >
+                  {projectGithubLink_4 === "" ? "" : "GitHub"}
+                </a>
+              </span>
+              <span className="pl-1">
+                <a
+                  className="underline underline-offset-1"
+                  href={projectLiveLink_4 === "" ? "" : projectLiveLink_4}
+                >
+                  {projectLiveLink_4 === "" ? "" : "Live"}
+                </a>
+              </span>
+            </div>
+
+            <div className="flex flex-row justify-between ">
+              <ul className="list-disc pl-7 ">
+                {projectDescription_4 === ""
+                  ? ""
+                  : createListItems(projectDescription_4)}
               </ul>
             </div>
           </div>
