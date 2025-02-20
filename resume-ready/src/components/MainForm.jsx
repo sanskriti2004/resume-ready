@@ -118,6 +118,43 @@ const MainForm = () => {
       ));
   };
 
+  // Define the handleDownloadPdf function
+  const handleDownloadPdf = () => {
+    const resumeSheet = document.getElementById("resume-sheet"); // Get the resume sheet element
+    if (!resumeSheet) {
+      console.error("Resume sheet element not found");
+      return;
+    }
+
+    html2canvas(resumeSheet)
+      .then((canvas) => {
+        const imgData = canvas.toDataURL("image/png");
+        const pdf = new jsPDF();
+        const imgWidth = 210; // A4 width in mm
+        const pageHeight = pdf.internal.pageSize.height;
+        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+        let heightLeft = imgHeight;
+
+        let position = 0;
+
+        // Add image to PDF and handle multiple pages if necessary
+        pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+        heightLeft -= pageHeight;
+
+        while (heightLeft >= 0) {
+          position = heightLeft - imgHeight;
+          pdf.addPage();
+          pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+          heightLeft -= pageHeight;
+        }
+
+        pdf.save("resume.pdf"); // Save the PDF
+      })
+      .catch((error) => {
+        console.error("Error generating PDF: ", error);
+      });
+  };
+
   return (
     <div className="p-4 flex flex-col">
       <h3 className="text-2xl font-normal text-center p-3">
@@ -1492,10 +1529,21 @@ const MainForm = () => {
           </div>
         </div>
       </div>
+      <div className="flex justify-center items-center ">
+        <button
+          className="w-100 mb-7 cursor-pointer bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          onClick={handleDownloadPdf}
+        >
+          Download as PDF
+        </button>
+      </div>
 
       {/* resume sheet */}
       <div className="flex justify-center flex-col items-center p-10 font-['Times_New_Roman'] bg-blue-100">
-        <div className="w-[210mm] h-[297mm] bg-white shadow-2xl p-7">
+        <div
+          id="resume-sheet"
+          className="w-[210mm] h-[297mm] bg-white shadow-2xl  p-7"
+        >
           {/* personal info */}
           <div className="flex flex-col justify-center ">
             <h2 className="text-3xl text-center font-bold ">{nameVal}</h2>
